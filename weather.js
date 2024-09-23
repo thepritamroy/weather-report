@@ -5,7 +5,7 @@
 
 // // Function to get weather data
 // function getWeather(city) {
-//     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+//     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
 //     fetch(url)
 //         .then(response => response.json())
