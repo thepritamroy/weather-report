@@ -1,47 +1,12 @@
-
-
-// // Your WeatherAPI key
-// const apiKey = '69a524bcbf224cc0a6084227242209';
-
-// // Function to get weather data
-// function getWeather(city) {
-//     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
-
-//     fetch(url)
-//         .then(response => response.json())
-//         .then(data => {
-//             const weather = `
-//                 <h2>Weather in ${data.location.name}</h2>
-//                 <p>Temperature: ${data.current.temp_c}°C</p>
-//                 <p>Weather: ${data.current.condition.text}</p>
-//                 <p>Humidity: ${data.current.humidity}%</p>
-//                 <p>Wind Speed: ${data.current.wind_kph} kph</p>
-//             `;
-//             document.getElementById('weather').innerHTML = weather;
-//         })
-//         .catch(error => console.error('Error fetching the weather data:', error));
-// }
-
-// // Example: Get weather for "London"
-// getWeather('spiti valley');
-
 const apiKey = '69a524bcbf224cc0a6084227242209';
 
 function getWeather(city) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
     fetch(url).then((response)=>{
        return response.json();
     }).then((data)=>{
-        // const weather = `
-        //                 <h2>Weather in ${data.location.name}</h2>
-        //                 <p>Temperature: ${data.current.temp_c}°C</p>
-        //                 <p>Weather: ${data.current.condition.text}</p>
-        //                 <p>Humidity: ${data.current.humidity}%</p>
-        //                 <p>Wind Speed: ${data.current.wind_kph} kph</p>
-        //              `;
-        //     document.getElementById('weather').innerHTML = weather;
-
+        
         const imageCondition = data.current.condition.text;
         let image= ''
         if(imageCondition==='Sunny' || imageCondition==='Clear'){
