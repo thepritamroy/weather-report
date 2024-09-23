@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto Condensed", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+/*    font-family: "Yanone Kaffeesatz", sans-serif;  */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ga+Maamli&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*   font-family: "Montserrat", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: "Lato", sans-serif; */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    border-radius: 10px;
+    width: 350px;
+    height: 600px;
+
+    background: linear-gradient(to bottom,#FFB939, #FFA520 , #FF950B);
+    position: relative;
+}
+
+.js-container-lightblue{
+    background: linear-gradient(to bottom, #0FCCF4,#01B7DC,#00AFD4);
+}
+.js-container-blue{
+    background: linear-gradient(to bottom, #0E5691,#024981,#003B67)
+}
+.js-container-violet{
+    background: linear-gradient(to bottom, #8278AA,#7A71A0,#69608B)
+}
+header{
+    position: relative;
+    font-family: "Lato", sans-serif;
+}
+nav{
+    color: white;
+    display: flex;
+    opacity: 1;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0px;
+
+    .fa-magnifying-glass{
+        cursor: pointer;
+    }
+}
+.right-logo{
+    padding-bottom: 5px;
+}
+
+.search{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    padding: 50px 45px;
+    text-align: center;
+    .js-city{
+        width: 0%;
+        padding: 7px;
+        border-radius: 5px;
+        outline-color: orange;
+        border: none;
+        transition: width 0.5s ease-in-out;
+        
+    }
+    .search-btn{
+        cursor: pointer;
+        margin-left: 10px;
+        padding: 7px 13px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        position: absolute;
+    }
+    .search-btn:hover{
+        background: rgb(255, 255, 255);
+    }
+}
+
+.js-city-trans{
+    width: 100% !important;
+}
+.js-search-appear{
+    visibility: visible;
+    opacity: 1;
+}
+.js-nav-disappear{
+    opacity: 0;
+}
+
+.weather-img{
+    margin-top: 30px;
+    text-align: center;
+    img{
+        filter: drop-shadow(0px 20px 10px rgba(57, 56, 56, 0.418));
+    }
+}
+
+.temp{
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    gap: 20px;
+    color: white;
+    margin-top: 30px;
+    
+    p{
+        position: relative;
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        font-size: 3.5em;
+        font-weight: 500;
+    }
+    i{
+        position: absolute;
+        top: 7px;
+        font-weight: bolder;
+    }
+
+    span{
+        font-family: "Lato", sans-serif;
+    }
+}
+.extra-info{
+    margin-top: 50px;
+}
+.weather-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    color: white;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    p{
+        letter-spacing: 1px;
+        font-size: 1.3em;
+    }
+}
+
+.footer{
+    font-size: .8em;
+    opacity: .7;
+    color: white;
+    position: absolute;
+    bottom: 4%;
+    right: 50%;
+    transform: translate(50%,4%);
+
+}
+
