@@ -14,7 +14,7 @@ function getWeather(city) {
             document.querySelector('.js-container').classList.add('js-container-lightblue')
             document.querySelector('.js-container').classList.remove('js-container-blue')
             document.querySelector('.js-container').classList.remove('js-container-violet')
-        }else if(imageCondition==='Light rain shower' || imageCondition==='Moderate rain' || imageCondition==='Patchy light rain' || imageCondition==='Light rain'){
+        }else if(imageCondition==='Light rain shower' || imageCondition==='Moderate rain' || imageCondition==='Patchy light rain' || imageCondition==='Light rain' || imageCondition==='Moderate or heavy rain shower'){
             image='rainy'
             document.querySelector('.js-container').classList.add('js-container-blue')
             document.querySelector('.js-container').classList.remove('js-container-lightblue')
