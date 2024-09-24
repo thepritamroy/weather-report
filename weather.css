@@ -40,6 +40,9 @@ body{
 .js-container-violet{
     background: linear-gradient(to bottom, #8278AA,#7A71A0,#69608B)
 }
+.js-container-green{
+    background: linear-gradient(to bottom, #2EC18D,#1EB78B,#0AA68E);
+}
 header{
     position: relative;
     font-family: "Lato", sans-serif;
