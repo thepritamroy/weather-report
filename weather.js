@@ -6,7 +6,6 @@ function getWeather(city) {
     fetch(url).then((response)=>{
        return response.json();
     }).then((data)=>{
-        
         const imageCondition = data.current.condition.text;
         let image= ''
         if(imageCondition==='Sunny' || imageCondition==='Clear'){
@@ -14,21 +13,31 @@ function getWeather(city) {
             document.querySelector('.js-container').classList.add('js-container-lightblue')
             document.querySelector('.js-container').classList.remove('js-container-blue')
             document.querySelector('.js-container').classList.remove('js-container-violet')
+            document.querySelector('.js-container').classList.remove('js-container-green')
         }else if(imageCondition==='Light rain shower' || imageCondition==='Moderate rain' || imageCondition==='Patchy light rain' || imageCondition==='Light rain' || imageCondition==='Moderate or heavy rain shower'){
             image='rainy'
             document.querySelector('.js-container').classList.add('js-container-blue')
             document.querySelector('.js-container').classList.remove('js-container-lightblue')
             document.querySelector('.js-container').classList.remove('js-container-violet')
+            document.querySelector('.js-container').classList.remove('js-container-green')
         }else if(imageCondition==='Heavy rain at times'){
             image='rainthunder'
             document.querySelector('.js-container').classList.add('js-container-violet')
             document.querySelector('.js-container').classList.remove('js-container-lightblue')
             document.querySelector('.js-container').classList.remove('js-container-blue')
+            document.querySelector('.js-container').classList.remove('js-container-green')
+        }else if(imageCondition==='Fog'){
+            image='cloudy'
+            document.querySelector('.js-container').classList.add('js-container-green')
+            document.querySelector('.js-container').classList.remove('js-container-lightblue')
+            document.querySelector('.js-container').classList.remove('js-container-blue')
+            document.querySelector('.js-container').classList.remove('js-container-violet')
         } else{
             image='cloudybutsunny'
             document.querySelector('.js-container').classList.remove('js-container-lightblue')
             document.querySelector('.js-container').classList.remove('js-container-blue')
             document.querySelector('.js-container').classList.remove('js-container-violet')
+            document.querySelector('.js-container').classList.remove('js-container-green')
 
         }
         
@@ -48,7 +57,7 @@ function getWeather(city) {
 
                         <div id="weather">
                             <div class="weather-img">
-                                <img height="170px" src="images/${image}.png" alt="cloud image">
+                                <img height="160px" src="images/${image}.png" alt="cloud image">
                             </div>
 
                             <div class="temp">
@@ -124,5 +133,17 @@ function getWeather(city) {
     
     })
 
-
+    document.addEventListener('keydown',(event)=>{
+        if(event.key==='Enter'){
+            const inputElement = document.querySelector('.js-city');
+            const cityName = inputElement.value;
+    
+            getWeather(cityName);
+    
+            
+            document.querySelector('.js-nav').classList.remove('js-nav-disappear')
+            document.querySelector('.js-search').classList.remove('js-search-appear')
+            document.querySelector('.js-city').classList.remove('js-city-trans')
+        }
+    })
     
